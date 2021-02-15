@@ -1,0 +1,11 @@
+unmanaged implementation in class ZBP_I_DMT_OVERVIEW unique;
+
+define behavior for ZI_DMT_OVERVIEW_2 alias object
+//late numbering
+//lock master
+//etag master <field_name>
+{
+
+action ( features: instance ) collect_data result [1] $self;
+
+}

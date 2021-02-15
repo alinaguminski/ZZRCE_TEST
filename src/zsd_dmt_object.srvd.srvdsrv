@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - DMT: Object'
+define service ZSD_DMT_OBJECT {
+  expose ZC_DMT_OBJECT as DMT_Object;
+}

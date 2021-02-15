@@ -1,0 +1,4 @@
+@EndUserText.label: 'DMT: Overview Page'
+define service ZSD_DMT_OVERVIEW {
+  expose ZC_DMT_OVERVIEW;
+}

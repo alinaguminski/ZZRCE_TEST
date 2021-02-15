@@ -1,0 +1,20 @@
+managed implementation in class ZBP_I_DMT_OBJECT_CHECK unique;
+
+define behavior for ZI_DMT_OBJECT alias object
+persistent table ZDMT_D_OBJECT
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly ) DATA_EXIST, DATA_EXIST_TIMESTAMP, MDG_MAPPING, MDG_MAPPING_TIMESTAMP, MAP_LOGSYSTEM, MAP_OBJECT_ID, MAP_DATA_EXIST;
+  field ( mandatory ) LOGSYSTEM, OBJECT_NAME, OBJECT_ID;
+
+  // instance action and dynamic action control
+  action ( features: instance ) check_existing result [1] $self;
+  action ( features: instance ) check_mapping result [1] $self;
+  action ( features: instance ) check_map_existing result [1] $self;
+
+  create;
+  update;
+  delete;
+}

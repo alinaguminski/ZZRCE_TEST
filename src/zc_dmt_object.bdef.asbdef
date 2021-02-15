@@ -1,0 +1,15 @@
+projection;
+
+define behavior for ZC_DMT_OBJECT
+{
+  // scenario specific field control
+  // field ( mandatory ) LOGSYSTEM, OBJECT_NAME, OBJECT_ID;
+  use create;
+  use update;
+  use delete;
+
+  // use action collect_data;
+  use action check_existing;
+  use action check_mapping;
+  use action check_map_existing;
+}

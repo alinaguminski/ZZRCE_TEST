@@ -1,0 +1,4 @@
+@EndUserText.label: 'DMT: Extraction Config'
+define service ZSD_DMT_EXTR_CNF {
+  expose ZC_DMT_EXTR_CNF as DMT_EXTR_CONFIG;
+}

@@ -1,0 +1,15 @@
+managed; // implementation in class zbp_i_dmt_extr_cnf unique;
+
+define behavior for ZI_DMT_EXTR_CNF //alias <alias_name>
+persistent table ZDMT_EXTR_CNF
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+
+  field ( mandatory ) LOGSYSTEM, OBJECT_NAME, tabname, fieldname, fieldval;
+
+  create;
+  update;
+  delete;
+}
